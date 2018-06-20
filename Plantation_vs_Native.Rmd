@@ -202,3 +202,12 @@ metacoder::heat_tree_matrix(taxa::filter_taxa(obj, taxon_names == "c__Agaricomyc
                             initial_layout = "reingold-tilford", layout = "davidson-harel")
 
 ```
+
+## Top 100 by site type
+
+### Plantation
+
+```{r}
+
+```
+

@@ -195,6 +195,7 @@ top500OTU <- prune_taxa(top500OTU.names, SOB_data)
 #Converting to metacoder
 obj <- parse_phyloseq(top500OTU)
 
+
 # Convert counts to proportions
 obj$data$otu_table <- calc_obs_props(obj,
                                      dataset = "otu_table",
