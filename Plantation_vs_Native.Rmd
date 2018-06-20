@@ -263,5 +263,27 @@ amp_rabund(SOB_data.stdf.INV,
 ```
 
 
+```{r}
+TopNOTUs <- function(sample,N) {
+  names(sort(taxa_sums(sample), TRUE)[1:N])
+}
+
+PL.sample <- merge_samples(SOB_data.stdf.PL, "site_code")
+INV.sample <- merge_samples(SOB_data.stdf.INV, "site_code")
+UN.sample <- merge_samples(SOB_data.stdf.UN, "site_code")
+
+top.PL <- TopNOTUs(PL.sample, 100)
+top.INV <- TopNOTUs(INV.sample, 100)
+top.UN <- TopNOTUs(UN.sample, 100)
+
+PL.100OTUs <- prune_taxa(top.PL, PL.sample) %>% psmelt()
+INV.100OTUs <- prune_taxa(top.INV, INV.sample) %>% psmelt()
+UN.100OTUs <- prune_taxa(top.UN, UN.sample) %>% psmelt()
+
+
+write.csv(PL.100OTUs, file = "top_100OTUs_Plantation.csv")
+write.csv(INV.100OTUs, file = "top_100OTUs_Invasive.csv")
+write.csv(UN.100OTUs, file = "top_100OTUs_Native.csv")
+```
 
 
