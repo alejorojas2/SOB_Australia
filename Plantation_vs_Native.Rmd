@@ -205,9 +205,58 @@ metacoder::heat_tree_matrix(taxa::filter_taxa(obj, taxon_names == "c__Agaricomyc
 
 ## Top 100 by site type
 
-### Plantation
+### Heatmap by Plantation, Invasive, and Native
 
-```{r}
-
+```{r, fig.height=14, fig.width=8}
+#Heatmap
+ht.type <-  amp_heatmap(data = SOB_data.stdf,
+            group = "site_code",
+            tax.show = 100,
+            scale.seq = 100,
+            plot.text.size = 2,
+            tax.aggregate = "Genus",
+            tax.add = "Order")
+ht.type + scale_x_discrete(breaks = c("INV", "null", "PL", "UN"),
+                           labels = c("Invasive", "Nullabor", "Plantation", "Native"))
 ```
 
+
+### Rank abudance of top 80 by forest type
+
+__Plantation__
+
+```{r}
+SOB_data.stdf.PL <- subset_samples(SOB_data.stdf, site_code == "PL")
+amp_rabund(SOB_data.stdf.PL,
+           tax.aggregate = "Genus", 
+           tax.add = "Order",
+           scale.seq = 10,
+           tax.show = 80,
+           adjust.zero = 0.1,
+           plot.log = TRUE)
+```
+
+__Native__
+
+```{r}
+SOB_data.stdf.UN <- subset_samples(SOB_data.stdf, site_code == "UN")
+amp_rabund(SOB_data.stdf.UN,
+           tax.aggregate = "Genus", 
+           tax.add = "Order",
+           scale.seq = 10,
+           tax.show = 80,
+           adjust.zero = 0.1,
+           plot.log = TRUE)
+```
+
+__Invasive__
+
+```{r}
+SOB_data.stdf.INV <- subset_samples(SOB_data.stdf, site_code == "INV")
+amp_rabund(SOB_data.stdf.INV,
+           tax.aggregate = "Genus", 
+           tax.add = "Order",
+           scale.seq = 10,
+           tax.show = 80,
+           adjust.zero = 0.1,
+           plot.log = TRUE)
