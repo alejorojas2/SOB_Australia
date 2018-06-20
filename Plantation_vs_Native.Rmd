@@ -207,7 +207,7 @@ metacoder::heat_tree_matrix(taxa::filter_taxa(obj, taxon_names == "c__Agaricomyc
 
 ### Heatmap by Plantation, Invasive, and Native
 
-```{r, fig.height=14, fig.width=8}
+```{r, fig.height=16, fig.width=8}
 #Heatmap
 ht.type <-  amp_heatmap(data = SOB_data.stdf,
             group = "site_code",
@@ -225,7 +225,7 @@ ht.type + scale_x_discrete(breaks = c("INV", "null", "PL", "UN"),
 
 __Plantation__
 
-```{r}
+```{r, fig.height=16}
 SOB_data.stdf.PL <- subset_samples(SOB_data.stdf, site_code == "PL")
 amp_rabund(SOB_data.stdf.PL,
            tax.aggregate = "Genus", 
@@ -238,7 +238,7 @@ amp_rabund(SOB_data.stdf.PL,
 
 __Native__
 
-```{r}
+```{r, fig.height=16}
 SOB_data.stdf.UN <- subset_samples(SOB_data.stdf, site_code == "UN")
 amp_rabund(SOB_data.stdf.UN,
            tax.aggregate = "Genus", 
@@ -251,7 +251,7 @@ amp_rabund(SOB_data.stdf.UN,
 
 __Invasive__
 
-```{r}
+```{r, fig.height=16}
 SOB_data.stdf.INV <- subset_samples(SOB_data.stdf, site_code == "INV")
 amp_rabund(SOB_data.stdf.INV,
            tax.aggregate = "Genus", 
