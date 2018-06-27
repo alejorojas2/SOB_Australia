@@ -91,41 +91,34 @@ ord.SOB <- ordinate(SOB_data.prop1, "NMDS", "bray")
 
 ```
 ## Run 0 stress 0.3272439 
-## Run 1 stress 0.324991 
+## Run 1 stress 0.3271709 
 ## ... New best solution
-## ... Procrustes: rmse 0.02641423  max resid 0.2188735 
-## Run 2 stress 0.3293062 
-## Run 3 stress 0.3243587 
+## ... Procrustes: rmse 0.034605  max resid 0.2062421 
+## Run 2 stress 0.3231505 
 ## ... New best solution
-## ... Procrustes: rmse 0.02582157  max resid 0.2191589 
-## Run 4 stress 0.3236486 
-## ... New best solution
-## ... Procrustes: rmse 0.02284304  max resid 0.2224103 
-## Run 5 stress 0.3253105 
-## Run 6 stress 0.3243008 
-## Run 7 stress 0.3273157 
-## Run 8 stress 0.3272866 
-## Run 9 stress 0.3275019 
-## Run 10 stress 0.323585 
-## ... New best solution
-## ... Procrustes: rmse 0.01134536  max resid 0.1814109 
-## Run 11 stress 0.3250794 
-## Run 12 stress 0.3368188 
-## Run 13 stress 0.3235016 
-## ... New best solution
-## ... Procrustes: rmse 0.023272  max resid 0.2216099 
-## Run 14 stress 0.3245983 
-## Run 15 stress 0.3234724 
-## ... New best solution
-## ... Procrustes: rmse 0.01872211  max resid 0.2254138 
-## Run 16 stress 0.325958 
-## Run 17 stress 0.3308166 
-## Run 18 stress 0.3358738 
-## Run 19 stress 0.4182711 
-## Run 20 stress 0.3250799 
+## ... Procrustes: rmse 0.0247594  max resid 0.2260914 
+## Run 3 stress 0.4182684 
+## Run 4 stress 0.3340041 
+## Run 5 stress 0.3242311 
+## Run 6 stress 0.3235061 
+## ... Procrustes: rmse 0.02189246  max resid 0.2233902 
+## Run 7 stress 0.3283945 
+## Run 8 stress 0.3281971 
+## Run 9 stress 0.3253827 
+## Run 10 stress 0.3247226 
+## Run 11 stress 0.3247521 
+## Run 12 stress 0.3363564 
+## Run 13 stress 0.3271408 
+## Run 14 stress 0.3237851 
+## Run 15 stress 0.3265173 
+## Run 16 stress 0.3271274 
+## Run 17 stress 0.3291448 
+## Run 18 stress 0.3257645 
+## Run 19 stress 0.3244434 
+## Run 20 stress 0.3327246 
 ## *** No convergence -- monoMDS stopping criteria:
-##      3: no. of iterations >= maxit
-##     17: stress ratio > sratmax
+##      2: no. of iterations >= maxit
+##     18: stress ratio > sratmax
 ```
 
 ```r
@@ -150,38 +143,33 @@ ord.SOB.PL <- ordinate(SOB_data.prop.PL, "NMDS", "bray")
 
 ```
 ## Run 0 stress 0.2891296 
-## Run 1 stress 0.2918815 
-## Run 2 stress 0.2895129 
-## ... Procrustes: rmse 0.01247778  max resid 0.113833 
-## Run 3 stress 0.2899605 
-## Run 4 stress 0.2907021 
-## Run 5 stress 0.2895129 
-## ... Procrustes: rmse 0.01229969  max resid 0.1138403 
-## Run 6 stress 0.292045 
-## Run 7 stress 0.2890911 
+## Run 1 stress 0.2876689 
 ## ... New best solution
-## ... Procrustes: rmse 0.02137696  max resid 0.1750331 
-## Run 8 stress 0.2880312 
-## ... New best solution
-## ... Procrustes: rmse 0.01740416  max resid 0.1754765 
-## Run 9 stress 0.288901 
-## Run 10 stress 0.291168 
-## Run 11 stress 0.2891288 
-## Run 12 stress 0.2900775 
-## Run 13 stress 0.2889627 
-## Run 14 stress 0.3177512 
-## Run 15 stress 0.2891363 
-## Run 16 stress 0.2901402 
-## Run 17 stress 0.2894934 
-## Run 18 stress 0.2881973 
-## ... Procrustes: rmse 0.005919558  max resid 0.06167274 
-## Run 19 stress 0.2877326 
-## ... New best solution
-## ... Procrustes: rmse 0.01087331  max resid 0.1147065 
-## Run 20 stress 0.2880902 
-## ... Procrustes: rmse 0.01030379  max resid 0.1138105 
+## ... Procrustes: rmse 0.01531088  max resid 0.1597298 
+## Run 2 stress 0.2890027 
+## Run 3 stress 0.2889662 
+## Run 4 stress 0.2891255 
+## Run 5 stress 0.2931497 
+## Run 6 stress 0.2900311 
+## Run 7 stress 0.2891465 
+## Run 8 stress 0.2909815 
+## Run 9 stress 0.292933 
+## Run 10 stress 0.2880395 
+## ... Procrustes: rmse 0.009450927  max resid 0.1145649 
+## Run 11 stress 0.2906672 
+## Run 12 stress 0.2888722 
+## Run 13 stress 0.2882818 
+## Run 14 stress 0.2919494 
+## Run 15 stress 0.2910357 
+## Run 16 stress 0.2904799 
+## Run 17 stress 0.2882752 
+## Run 18 stress 0.2928396 
+## Run 19 stress 0.288037 
+## ... Procrustes: rmse 0.009386043  max resid 0.1141034 
+## Run 20 stress 0.2892791 
 ## *** No convergence -- monoMDS stopping criteria:
-##     20: stress ratio > sratmax
+##      1: no. of iterations >= maxit
+##     19: stress ratio > sratmax
 ```
 
 ```r
@@ -214,31 +202,33 @@ ord.SOB.UN <- ordinate(SOB_data.prop.UN, "NMDS", "bray")
 
 ```
 ## Run 0 stress 0.295749 
-## Run 1 stress 0.2960179 
-## ... Procrustes: rmse 0.05379557  max resid 0.1848509 
-## Run 2 stress 0.2894091 
+## Run 1 stress 0.2884708 
 ## ... New best solution
-## ... Procrustes: rmse 0.0649258  max resid 0.2105987 
-## Run 3 stress 0.2929966 
-## Run 4 stress 0.2900297 
-## Run 5 stress 0.291876 
-## Run 6 stress 0.2920973 
-## Run 7 stress 0.2882637 
+## ... Procrustes: rmse 0.0533707  max resid 0.2266338 
+## Run 2 stress 0.2955162 
+## Run 3 stress 0.2954637 
+## Run 4 stress 0.2931377 
+## Run 5 stress 0.2981559 
+## Run 6 stress 0.2882965 
 ## ... New best solution
-## ... Procrustes: rmse 0.02047467  max resid 0.09910336 
-## Run 8 stress 0.2900333 
-## Run 9 stress 0.2957215 
-## Run 10 stress 0.3004788 
-## Run 11 stress 0.2898515 
-## Run 12 stress 0.3051156 
-## Run 13 stress 0.2903868 
-## Run 14 stress 0.2897819 
-## Run 15 stress 0.3011159 
-## Run 16 stress 0.2899798 
-## Run 17 stress 0.2896673 
-## Run 18 stress 0.290406 
-## Run 19 stress 0.2898804 
-## Run 20 stress 0.2889866 
+## ... Procrustes: rmse 0.01458933  max resid 0.1022946 
+## Run 7 stress 0.2996505 
+## Run 8 stress 0.2926715 
+## Run 9 stress 0.3012843 
+## Run 10 stress 0.2885983 
+## ... Procrustes: rmse 0.02435067  max resid 0.2509616 
+## Run 11 stress 0.2923056 
+## Run 12 stress 0.2886835 
+## ... Procrustes: rmse 0.02704382  max resid 0.2445538 
+## Run 13 stress 0.2898205 
+## Run 14 stress 0.2971962 
+## Run 15 stress 0.2952565 
+## Run 16 stress 0.2901546 
+## Run 17 stress 0.2931713 
+## Run 18 stress 0.2883606 
+## ... Procrustes: rmse 0.003211131  max resid 0.02041259 
+## Run 19 stress 0.2895781 
+## Run 20 stress 0.2889773 
 ## *** No convergence -- monoMDS stopping criteria:
 ##     20: stress ratio > sratmax
 ```
@@ -273,33 +263,40 @@ ord.SOB.UN1 <- ordinate(SOB_data.prop.UN1, "NMDS", "bray")
 
 ```
 ## Run 0 stress 0.3250856 
-## Run 1 stress 0.3153795 
+## Run 1 stress 0.3204581 
 ## ... New best solution
-## ... Procrustes: rmse 0.06878835  max resid 0.2661971 
-## Run 2 stress 0.3267914 
-## Run 3 stress 0.3265395 
-## Run 4 stress 0.3293899 
-## Run 5 stress 0.3340861 
-## Run 6 stress 0.3255799 
-## Run 7 stress 0.3145817 
+## ... Procrustes: rmse 0.05730455  max resid 0.2222996 
+## Run 2 stress 0.3186165 
 ## ... New best solution
-## ... Procrustes: rmse 0.03474687  max resid 0.3123634 
-## Run 8 stress 0.3150517 
-## ... Procrustes: rmse 0.03472002  max resid 0.3151576 
-## Run 9 stress 0.31541 
-## Run 10 stress 0.315621 
-## Run 11 stress 0.3202786 
-## Run 12 stress 0.315084 
-## Run 13 stress 0.3249198 
-## Run 14 stress 0.314252 
+## ... Procrustes: rmse 0.04564094  max resid 0.2216435 
+## Run 3 stress 0.3238501 
+## Run 4 stress 0.318702 
+## ... Procrustes: rmse 0.05246132  max resid 0.3038673 
+## Run 5 stress 0.3169293 
 ## ... New best solution
-## ... Procrustes: rmse 0.02134826  max resid 0.09567648 
-## Run 15 stress 0.3222605 
-## Run 16 stress 0.3149147 
-## Run 17 stress 0.3154573 
-## Run 18 stress 0.3214494 
-## Run 19 stress 0.3289438 
-## Run 20 stress 0.315335 
+## ... Procrustes: rmse 0.03768056  max resid 0.226009 
+## Run 6 stress 0.3278974 
+## Run 7 stress 0.3151927 
+## ... New best solution
+## ... Procrustes: rmse 0.02801938  max resid 0.1707524 
+## Run 8 stress 0.3157709 
+## Run 9 stress 0.3182548 
+## Run 10 stress 0.3313282 
+## Run 11 stress 0.3237317 
+## Run 12 stress 0.3254074 
+## Run 13 stress 0.3182641 
+## Run 14 stress 0.3148973 
+## ... New best solution
+## ... Procrustes: rmse 0.03175343  max resid 0.3041805 
+## Run 15 stress 0.3258368 
+## Run 16 stress 0.315013 
+## ... Procrustes: rmse 0.03862069  max resid 0.3016616 
+## Run 17 stress 0.3161033 
+## Run 18 stress 0.3149625 
+## ... Procrustes: rmse 0.005119172  max resid 0.03398091 
+## Run 19 stress 0.3151797 
+## ... Procrustes: rmse 0.01933077  max resid 0.1415934 
+## Run 20 stress 0.3264354 
 ## *** No convergence -- monoMDS stopping criteria:
 ##      1: no. of iterations >= maxit
 ##     19: stress ratio > sratmax
