@@ -77,7 +77,7 @@ ggplot(data = sample_data(ecto_SOB), aes(x = state, y =obs.physeq)) +
 
 ```{r}
 #dist.ectoSOB <- phyloseq::distance(ecto_SOB, method = "jaccard", binary = TRUE)
-ord.ectoSOB <- ordinate(ecto_SOB, "NMDS", "bray")
+ord.ectoSOB <- phyloseq::ordinate(ecto_SOB, "PCoA", "bray", autotransform = TRUE)
 plot_ordination(ecto_SOB, ord.ectoSOB, color = "site_code") + geom_point(size = 3)
 ```
 

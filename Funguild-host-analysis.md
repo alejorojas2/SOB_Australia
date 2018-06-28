@@ -145,54 +145,7 @@ ggplot(data = sample_data(ecto_SOB), aes(x = state, y =obs.physeq)) +
 
 ```r
 #dist.ectoSOB <- phyloseq::distance(ecto_SOB, method = "jaccard", binary = TRUE)
-ord.ectoSOB <- ordinate(ecto_SOB, "NMDS", "bray")
-```
-
-```
-## Square root transformation
-## Wisconsin double standardization
-## Run 0 stress 0.001602772 
-## Run 1 stress 0.001663897 
-## ... Procrustes: rmse 0.001896788  max resid 0.03279332 
-## Run 2 stress 0.001123727 
-## ... New best solution
-## ... Procrustes: rmse 0.001375105  max resid 0.02375578 
-## Run 3 stress 0.0003174718 
-## ... New best solution
-## ... Procrustes: rmse 0.0007278649  max resid 0.01226682 
-## Run 4 stress 0.001221319 
-## Run 5 stress 0.001604319 
-## Run 6 stress 0.001241428 
-## Run 7 stress 0.001871516 
-## Run 8 stress 0.001229841 
-## Run 9 stress 0.0004181355 
-## ... Procrustes: rmse 0.0003173746  max resid 0.004477593 
-## ... Similar to previous best
-## Run 10 stress 0.0009188048 
-## Run 11 stress 0.001519861 
-## Run 12 stress 0.01101568 
-## Run 13 stress 0.0002956949 
-## ... New best solution
-## ... Procrustes: rmse 0.0003149949  max resid 0.004073988 
-## ... Similar to previous best
-## Run 14 stress 0.001360872 
-## Run 15 stress 0.01393934 
-## Run 16 stress 0.001612286 
-## Run 17 stress 0.001669659 
-## Run 18 stress 0.001440028 
-## Run 19 stress 0.0008064897 
-## Run 20 stress 0.0003182643 
-## ... Procrustes: rmse 0.0003266641  max resid 0.005698598 
-## ... Similar to previous best
-## *** Solution reached
-```
-
-```
-## Warning in metaMDS(veganifyOTU(physeq), distance, ...): stress is (nearly)
-## zero: you may have insufficient data
-```
-
-```r
+ord.ectoSOB <- phyloseq::ordinate(ecto_SOB, "PCoA", "bray", autotransform = TRUE)
 plot_ordination(ecto_SOB, ord.ectoSOB, color = "site_code") + geom_point(size = 3)
 ```
 
