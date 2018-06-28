@@ -47,6 +47,7 @@ test.assign <- fg_assign(test)
 
 ```
 
+#Ectomycorrhiza guild
 
 ```{r}
 
@@ -54,15 +55,13 @@ test.assign <- fg_assign(test)
 ecto_OTU <- row.names(test.assign[grepl("Ecto", test.assign$guild),] )
 
 ecto_SOB <- prune_taxa(ecto_OTU, SOB_data.std)
-
+ecto_SOB <- subset_samples(ecto_SOB, site_code != "null")
 
 #alpha diversity
 sample_data(ecto_SOB)$obs.physeq <- estimate_richness(ecto_SOB, measures = "Observed") 
 head(sample_data((ecto_SOB)))
 
-alpha_ectoSOB <- plot_richness(subset_samples(ecto_SOB, site_code != "null"),
-                           x="state", 
-                           measures = "Observed")
+
 
 ggplot(data = sample_data(ecto_SOB), aes(x = state, y =obs.physeq)) +
   geom_boxplot(aes(fill = site_code)) + 
@@ -72,5 +71,11 @@ ggplot(data = sample_data(ecto_SOB), aes(x = state, y =obs.physeq)) +
                               "null" = "Nullabor"),
                         name = "Site type") +
   xlab("Site") + ylab("Observed")
+```
+
+```{r}
+#dist.ectoSOB <- phyloseq::distance(ecto_SOB, method = "jaccard", binary = TRUE)
+ord.ectoSOB <- ordinate(ecto_SOB, "NMDS", "bray")
+plot_ordination(ecto_SOB, ord.ectoSOB, color = "site_code") + geom_point(size = 3)
 ```
 
