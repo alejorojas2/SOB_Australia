@@ -22,10 +22,17 @@ load(file = "SOB_files.rda")
 source("fg_assign.r")
 ```
 
+```{r, echo=FALSE}
+#Standardize abundances to the median sequencing depth
+total <- median(sample_sums(SOB_data))
+standf <- function(x, t=total) round(t * (x/sum(x)))
+SOB_data.std <- transform_sample_counts(SOB_data, standf)
+```
+
 
 # Assigning guild to the taxonomy table
 
-```{r}
+```{r, warning=FALSE}
 str_charc <- function(x) { gsub('[f,p,c,o,k,g,s]__', '', x)}
 
 test <- data.frame(tax_table(SOB_data)) %>% 
@@ -38,5 +45,32 @@ test <- data.frame(tax_table(SOB_data)) %>%
                     
 test.assign <- fg_assign(test)
 
+```
+
+
+```{r}
+
+#Filtering Ecto using Funguild
+ecto_OTU <- row.names(test.assign[grepl("Ecto", test.assign$guild),] )
+
+ecto_SOB <- prune_taxa(ecto_OTU, SOB_data.std)
+
+
+#alpha diversity
+sample_data(ecto_SOB)$obs.physeq <- estimate_richness(ecto_SOB, measures = "Observed") 
+head(sample_data((ecto_SOB)))
+
+alpha_ectoSOB <- plot_richness(subset_samples(ecto_SOB, site_code != "null"),
+                           x="state", 
+                           measures = "Observed")
+
+ggplot(data = sample_data(ecto_SOB), aes(x = state, y =obs.physeq)) +
+  geom_boxplot(aes(fill = site_code)) + 
+    scale_fill_discrete(labels = c("INV" = "Invasive", 
+                              "PL" = "Plantation",
+                              "UN" = "Native",
+                              "null" = "Nullabor"),
+                        name = "Site type") +
+  xlab("Site") + ylab("Observed")
 ```
 
