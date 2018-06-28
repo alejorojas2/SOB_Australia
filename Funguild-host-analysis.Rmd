@@ -1,0 +1,42 @@
+---
+title: "Funguild and Host"
+author: "Alejandro Rojas"
+date: "6/27/2018"
+output: html_document
+---
+
+```{r libs, message=FALSE, warning=FALSE}
+library(phyloseq)
+library(dplyr)
+library(tidyr)
+library(tibble)
+library(ggplot2)
+library(vegan)
+library(readr)
+library(ampvis)
+
+load(file = "SOB_files.rda")
+
+#loading Colin's function to assign guild to a taxonomy file
+#https://github.com/colinaverill/fg_assign.r
+source("fg_assign.r")
+```
+
+
+# Assigning guild to the taxonomy table
+
+```{r}
+str_charc <- function(x) { gsub('[f,p,c,o,k,g,s]__', '', x)}
+
+test <- data.frame(tax_table(SOB_data)) %>% 
+  dplyr::rename(kingdom = Kingdom, phylum = Phylum, class = Class, order = Order, family = Family, genus = Genus, species = Species) %>% rownames_to_column( var = "OTU_ID") %>%
+  mutate_all(.funs = str_charc) %>%
+  column_to_rownames("OTU_ID")
+
+
+#test.clean <- data.frame(lapply(test, function(x) gsub('[f,p,c,o,k,g,s]__', '', x)))
+                    
+test.assign <- fg_assign(test)
+
+```
+
